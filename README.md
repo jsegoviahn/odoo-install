@@ -1,17 +1,16 @@
 # [Odoo](https://www.odoo.com "Odoo's Homepage") Install Script
 
-This script is based on the install script from André Schenkels (https://github.com/aschenkels-ictstudio/openerp-install-scripts)
-but goes a bit further and has been improved. This script will also give you the ability to define an xmlrpc_port in the .conf file that is generated under /etc/
-This script can be safely used in a multi-odoo code base server because the default Odoo port is changed BEFORE the Odoo is started.
+This script is based on the install script for Odoo 16 from Yenthe Van Ginneken (https://github.com/Yenthe666/InstallScript) but it was modified to be used for development purposes.
 
-## Installing Nginx
-If you set the parameter ```INSTALL_NGINX``` to ```True``` you should also configure workers. Without workers you will probably get connection loss issues. Look at [the deployment guide from Odoo](https://www.odoo.com/documentation/16.0/administration/install/deploy.html) on how to configure workers.
+This script will not configure / install:
+- xmlrpc_port
+- Nginx
 
 ## Installation procedure
 
 ##### 1. Download the script:
 ```
-sudo wget https://raw.githubusercontent.com/Yenthe666/InstallScript/16.0/odoo_install.sh
+sudo wget https://raw.githubusercontent.com/Yenthe666/InstallScript/16.0/odoo_install_dev.sh
 ```
 ##### 2. Modify the parameters as you wish.
 There are a few things you can configure, this is the most used list:<br/>
@@ -31,11 +30,11 @@ There are a few things you can configure, this is the most used list:<br/>
 
 #### 3. Make the script executable
 ```
-sudo chmod +x odoo_install.sh
+sudo chmod +x odoo_install_dev.h
 ```
 ##### 4. Execute the script:
 ```
-sudo ./odoo_install.sh
+sudo ./odoo_install_dev.sh
 ```
 
 ## Where should I host Odoo?
